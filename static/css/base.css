@@ -44,24 +44,58 @@ body {
   align-items: center;
   display: inline-flex;
   justify-content: center;
-  color: #f8bbd0;
+  color: black;
   height: 1.5rem;
   width: 1rem;
 }
 
+.text-black {
+    color: #000 !important;
+}
 
-/* from https://community.adobe.com/t5/dreamweaver/bootstrap-4-2-1-navbar-with-centered-brand-logo/td-p/4789048 */
+/* right list replaced by main-nav when exdend menu in mobile */
+.right-list {
+    display: none;
+}
+
+.collapse-header {
+    display: flex;
+}
+
+/* style navbar in mobile with right list at the center */
+.list-inline-item .text-black {
+    font-size:small;
+}
+
+.navbar-toggler {
+    font-size: 1rem;
+}
+
+.dropdown-menu {
+    background-image: linear-gradient(to right bottom, #f8bbd0, #ffbdc4, #ffc1b9, #ffc7ae, #ffcea6);
+}
+
+
 @media (min-width: 62rem) {
+    /* from https://community.adobe.com/t5/dreamweaver/bootstrap-4-2-1-navbar-with-centered-brand-logo/td-p/4789048 */
     .navbar-brand {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        /**optional offset from top**/
+        /** offset from top **/
         top: 3%;
     }  
+    /* main-nav replaced by right-list in desktop mode */
+    .right-list {
+        display: flex;
+    }
+
+    .collapse-header {
+        display: none;
+    }
 }
 
-/* content */
+/* content  - provvisory*/
 main {
     margin-top: 4rem;
 }
