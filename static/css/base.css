@@ -1,8 +1,8 @@
 /* import google font */
-@import url('https://fonts.googleapis.com/css2?family=Allison&family=Lato&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Lato&family=Lobster&display=swap');
 
 /* font to use:
-    font-family: 'Allison', cursive;
+    font-family: 'Cookie', cursive;
     font-family: 'Lato', sans-serif;
     font-family: 'Lobster', cursive;
 */
@@ -23,9 +23,16 @@ body {
     background-size: cover;
     height: calc(100vh - 10.25rem);
     font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Navbar */
+
+#topNav {
+    z-index: 100;
+}
+
 .bg-trasparent {
     background-color: transparent !important;
 }
@@ -37,6 +44,13 @@ body {
 
 #search-input {
   max-width: 6.5rem;
+}
+
+#logo {
+    width: 6.25rem;
+    position: absolute;
+    top: .6rem;
+    left: -.1rem;
 }
 
 /* from Bulma */
@@ -54,7 +68,7 @@ body {
 }
 
 /* right list replaced by main-nav when exdend menu in mobile */
-.right-list {
+.mobile-d-none {
     display: none;
 }
 
@@ -75,6 +89,55 @@ body {
     background-image: linear-gradient(to right bottom, #f8bbd0, #ffbdc4, #ffc1b9, #ffc7ae, #ffcea6);
 }
 
+/* Carousel */
+.cookie {
+    font-family: 'Cookie', cursive;
+}
+
+.mt-custom {
+    margin: 5rem 0 1rem;
+    padding: 0;
+}
+
+.over-image {
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    justify-content: center;
+    z-index: 1;
+    color:aliceblue;
+}
+
+#carousel-section {
+    padding: 0;
+    justify-content: center;
+}
+
+/* footer */
+
+main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+}
+
+.social {
+    font-size: large;
+    color: black;
+    margin: 0 1rem;
+}
+
+small {
+    font-size: x-small;
+}
+
+@media (min-width: 36.75rem) {
+    .over-image {
+        padding: 0 6rem;
+    }
+}
 
 @media (min-width: 62rem) {
     /* from https://community.adobe.com/t5/dreamweaver/bootstrap-4-2-1-navbar-with-centered-brand-logo/td-p/4789048 */
@@ -82,21 +145,26 @@ body {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        /** offset from top **/
-        top: 3%;
-    }  
+    }
+
+    #logo {
+        width: 9rem;
+        position: relative;
+        top: 0;
+    }
+
     /* main-nav replaced by right-list in desktop mode */
-    .right-list {
+    .mobile-d-none {
         display: flex;
     }
 
     .collapse-header {
         display: none;
     }
-}
 
-/* content  - provvisory*/
-main {
-    margin-top: 4rem;
+    /* Carousel */
+    .mt-custom {
+        margin-top: 9rem;
+    }
 }
 
