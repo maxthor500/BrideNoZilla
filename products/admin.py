@@ -6,11 +6,11 @@ from .models import Product, Category, Inventory
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'name',
-        'category',
-        'inventory'
+        'category_id',
+        'inventory_id',
         'price',
         'rating',
-        'image',
+        'product_image',
     )
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -21,7 +21,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 class InventoryAdmin(admin.ModelAdmin):
     list_display = (
-        'name_product',
+        'name',
         'quantity',
     )
 
