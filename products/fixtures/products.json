@@ -1,0 +1,289 @@
+[
+    {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+          "name": "classic hand fan",
+          "description": "Folding silk fan with bamboo sticks",
+          "rating": 3.5,
+          "price": 8.99,
+          "category_id": 1,
+          "inventory_id": 1,
+          "product_image": "image-not-available.svg"
+          }
+    },
+    {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+          "name": "paper hand fan",
+          "description": "Folding paper fan with custom event logo",
+          "rating": 4,
+          "price": 1.99,
+          "category_id": 1,
+          "inventory_id": 2,
+          "product_image": "image-not-available.svg"
+          }
+    },
+    {
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+          "name": "custom invitations",
+          "description": "Flat 21x10 paper card with personalized decorations",
+          "rating": 5,
+          "price": 0.79,
+          "category_id": 1,
+          "inventory_id": 3,
+          "product_image": "image-not-available.svg"
+          }
+    },
+    {
+      "pk": 4,
+      "model": "products.product",
+      "fields": {
+          "name": "50 custom labels",
+          "description": "adhesive labels personalized to use on the gadgets of the event",
+          "rating": 5,
+          "price": 5.99,
+          "category_id": 1,
+          "inventory_id": 4,
+          "product_image": "image-not-available.svg"
+          }
+    },
+    {
+      "pk": 5,
+      "model": "products.product",
+      "fields": {
+          "name": "10 wedding booklets",
+          "description": "Flat 15x21 custom wedding booklets",
+          "rating": 4,
+          "price": 18.99,
+          "category_id": 1,
+          "inventory_id": 5,
+          "product_image": "image-not-available.svg"
+          }
+    },
+    {
+      "pk": 6,
+      "model": "products.product",
+      "fields": {
+          "name": "kit coordinated graphic",
+          "description": "bag with inside: 1 sanitizer, 1 bottle, 1 hand fan, 1 pack with rice, 1 booklet.",
+          "rating": 3,
+          "price": 7.99,
+          "category_id": 1,
+          "inventory_id": 6,
+          "product_image": "image-not-available.svg"
+          }
+    },
+    {
+      "pk": 7,
+      "model": "products.product",
+      "fields": {
+          "name": "tableau",
+          "description": "custom tableau",
+          "rating": 4,
+          "price": 20.99,
+          "category_id": 2,
+          "inventory_id": 7,
+          "product_image": "image-not-available.svg"
+          }
+    },
+    {
+      "pk": 8,
+      "model": "products.product",
+      "fields": {
+          "name": "20 wedding favors boxes",
+          "description": "boxes for wedding favors personalized",
+          "rating": 4,
+          "price": 8.99,
+          "category_id": 2,
+          "inventory_id": 8,
+          "product_image": "image-not-available.svg"
+          }
+    },
+    {
+      "pk": 9,
+      "model": "products.product",
+      "fields": {
+          "name": "wedding dragées boxes",
+          "description": "wedding dragées boxes personalized",
+          "rating": 4,
+          "price": 0.69,
+          "category_id": 2,
+          "inventory_id": 9,
+          "product_image": "image-not-available.svg"
+          }
+    },
+    {
+      "pk": 10,
+      "model": "products.product",
+      "fields": {
+          "name": "dragées",
+          "description": "dragées assorted flavor and colors - 500g pack",
+          "rating": 5,
+          "price": 9.99,
+          "category_id": 2,
+          "inventory_id": 10,
+          "product_image": "image-not-available.svg"
+          }
+    },
+    {
+      "pk": 11,
+      "model": "products.product",
+      "fields": {
+          "name": "kit rum, chocolate and cigars",
+          "description": "kit with a bottle of rum, 500gr of dark chocolate and 10 cigars",
+          "rating": 4,
+          "price": 31.99,
+          "category_id": 2,
+          "inventory_id": 11,
+          "product_image": "image-not-available.svg"
+          }
+    },
+    {
+      "pk": 12,
+      "model": "products.product",
+      "fields": {
+          "name": "roses bouquet",
+          "description": "Hand-tied bouquet made with the roses flowers",
+          "rating": 4,
+          "price": 69.99,
+          "category_id": 3,
+          "inventory_id": 12,
+          "product_image": "image-not-available.svg"
+          }
+    },
+    {
+      "pk": 13,
+      "model": "products.product",
+      "fields": {
+          "name": "mixed flowers bouquet",
+          "description": "Hand-tied bouquet made with the finest flowers",
+          "rating": 4,
+          "price": 49.99,
+          "category_id": 3,
+          "inventory_id": 13,
+          "product_image": "image-not-available.svg"
+          }
+    },
+    {
+      "pk": 14,
+      "model": "products.product",
+      "fields": {
+          "name": "centerpiece flowers",
+          "description": "centerpiece made with the finest flowers",
+          "rating": 4,
+          "price": 19.99,
+          "category_id": 3,
+          "inventory_id": 14,
+          "product_image": "image-not-available.svg"
+          }
+    },
+    {
+      "pk": 15,
+      "model": "products.product",
+      "fields": {
+          "name": "One level cake",
+          "description": "One level cake 2kg",
+          "rating": 4,
+          "price": 28.99,
+          "category_id": 4,
+          "inventory_id": 15,
+          "product_image": "image-not-available.svg"
+          }
+    },
+    {
+      "pk": 22,
+      "model": "products.product",
+      "fields": {
+          "name": "Two level cake",
+          "description": "Two level cake 3kg",
+          "rating": 4,
+          "price": 42.99,
+          "category_id": 4,
+          "inventory_id": 22,
+          "product_image": "image-not-available.svg"
+          }
+    },
+    {
+      "pk": 16,
+      "model": "products.product",
+      "fields": {
+          "name": "filled with chocolate",
+          "description": "filled with chocolate",
+          "rating": 4,
+          "price": 0.99,
+          "category_id": 4,
+          "inventory_id":16,
+          "product_image": "image-not-available.svg"
+          }
+    },
+    {
+      "pk": 17,
+      "model": "products.product",
+      "fields": {
+          "name": "filled with strawberry",
+          "description": "filled with strawberry",
+          "rating": 4,
+          "price": 1.99,
+          "category_id": 4,
+          "inventory_id": 17,
+          "product_image": "image-not-available.svg"
+          }
+    },
+    {
+      "pk": 18,
+      "model": "products.product",
+      "fields": {
+          "name": "filled with custard",
+          "description": "filled with custard",
+          "rating": 4,
+          "price": 0.99,
+          "category_id": 4,
+          "inventory_id": 18,
+          "product_image": "image-not-available.svg"
+          }
+    },
+    {
+      "pk": 19,
+      "model": "products.product",
+      "fields": {
+          "name": "chocolate glaze",
+          "description": "strawberry glaze",
+          "rating": 4,
+          "price": 1.29,
+          "category_id": 4,
+          "inventory_id": 19,
+          "product_image": "image-not-available.svg"
+          }
+    },
+    {
+      "pk": 20,
+      "model": "products.product",
+      "fields": {
+          "name": "cream glaze",
+          "description": "cream glaze",
+          "rating": 4,
+          "price": 0.69,
+          "category_id": 4,
+          "inventory_id": 20,
+          "product_image": "image-not-available.svg"
+          }
+    },
+    {
+      "pk": 21,
+      "model": "products.product",
+      "fields": {
+          "name": "sugar paste glaze",
+          "description": "sugar paste glaze",
+          "rating": 4,
+          "price": 2.29,
+          "category_id": 4,
+          "inventory_id": 21,
+          "product_image": "image-not-available.svg"
+          }
+    }
+  ]
+  

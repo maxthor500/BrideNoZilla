@@ -33,10 +33,6 @@ body {
     z-index: 100;
 }
 
-.bg-trasparent {
-    background-color: transparent !important;
-}
-
 .nav-item {
     font-family: 'Lobster', cursive;
     font-size:large;
@@ -95,7 +91,7 @@ body {
 }
 
 .mt-custom {
-    margin: 5rem 0 1rem;
+    margin: 6rem 0 1rem;
     padding: 0;
 }
 
@@ -105,12 +101,25 @@ body {
     left: 0;
     justify-content: center;
     z-index: 1;
-    color:aliceblue;
 }
 
 #carousel-section {
     padding: 0;
     justify-content: center;
+}
+
+.shop-btn-div {
+    margin-top: 5rem;
+}
+
+.shop-now-button {
+    background: black;
+    color: white;
+    font-family: 'Lobster', cursive;
+}
+
+#main-text {
+    display: none;
 }
 
 /* footer */
@@ -133,9 +142,20 @@ small {
     font-size: x-small;
 }
 
-@media (min-width: 36.75rem) {
-    .over-image {
-        padding: 0 6rem;
+@media (min-width: 47.93rem) {
+    #main-text {
+        display: block;
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        
+    }
+
+    .shop-btn-div {
+        margin-top: 0;
+    }
+
+    #main-text-mobile {
+        display: none;
     }
 }
 
@@ -166,5 +186,10 @@ small {
     .mt-custom {
         margin-top: 9rem;
     }
+
+    #main-text {
+        font-size: 2rem;      
+    }
+
 }
 
