@@ -29,11 +29,11 @@
     {% block corejs %}
         <!-- JQuery -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
         <!-- Bootstrap scripts -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" 
-            integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+            integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous" defer></script>
     {% endblock %}
 
     {% block extra_js %}
@@ -47,7 +47,7 @@
         <!-- Navbar -->
         <nav  id="topNav" class="navbar fixed-to navbar-expand-lg navbar-light bg-white">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{% url 'home' %}">
                     <img id="logo" src="{% static 'media/BNZLogo.png' %}" alt="BNZ">
                 </a>
                 <!-- mobile top header with navbar, my account and cart -->
@@ -63,7 +63,7 @@
                 <!-- left list with info section -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item mobile-d-none">
-                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About Me</a>
@@ -144,9 +144,11 @@
     {% endblock %}
 
     {% block content %}
+    <main class="container"></main>
     {% endblock %}
 
-    {% include 'includes/footer.html' %}
+    {% block footer %}
+    {% endblock %}
 
     {% block postloadjs %}
     {% endblock %}

@@ -85,16 +85,21 @@ body {
     background-image: linear-gradient(to right bottom, #f8bbd0, #ffbdc4, #ffc1b9, #ffc7ae, #ffcea6);
 }
 
-/* Carousel */
-.cookie {
+.font-cookie {
     font-family: 'Cookie', cursive;
+
 }
 
-.mt-custom {
+.font-lobster {
+    font-family: 'Lobster', cursive;
+}
+
+.m-custom {
     margin: 6rem 0 1rem;
     padding: 0;
 }
 
+/* Carousel */
 .over-image {
     position: absolute;
     top: 6rem;
@@ -108,30 +113,49 @@ body {
     justify-content: center;
 }
 
+/* shop now button */
 .shop-btn-div {
     margin-top: 5rem;
 }
 
 .shop-now-button {
+    background: white;
+    color: black;
+    font-family: 'Lobster', cursive;
+}
+
+.shop-now-button:hover {
     background: black;
     color: white;
-    font-family: 'Lobster', cursive;
 }
 
 #main-text {
     display: none;
 }
 
-/* footer */
-
-main {
-    flex: 1 0 auto;
+/* products */
+.overlay {
+    max-height: 6.25rem;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -1;
+    margin-left: 1rem;
 }
 
-.footer {
-    flex-shrink: 0;
+.card {
+    background-color: rgba(242, 243, 244, 0.6);
+    width: 20rem;
+    margin: 1rem;
 }
 
+.card-img-top {
+    width: 10rem;
+    height: 10rem;
+}
+
+/* footer */ 
 .social {
     font-size: large;
     color: black;
@@ -142,7 +166,7 @@ small {
     font-size: x-small;
 }
 
-@media (min-width: 47.93rem) {
+@media (min-width: 48rem) {
     #main-text {
         display: block;
         font-size: 1.5rem;
@@ -183,7 +207,7 @@ small {
     }
 
     /* Carousel */
-    .mt-custom {
+    .m-custom {
         margin-top: 9rem;
     }
 
