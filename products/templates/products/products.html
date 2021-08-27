@@ -20,7 +20,7 @@
     <section class="row text-center justify-content-center">
         {% for product in products %}
             <!-- check if the products are not in the "cake" category -->
-            {% if product.id < 14 %}
+            {% if product.id <= 14 %}
                 <div class="card">
                     {% if product.product_image %}
                         <a href="{% url 'product_detail' product.id %}">

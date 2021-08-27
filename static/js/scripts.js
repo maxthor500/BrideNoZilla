@@ -1,16 +1,12 @@
-
-/* solution from https://stackoverflow.com/questions/18562265/remove-css-class-depending-on-screen-size-jquery */
-$(function(){
-
-    $(window).bind("resize",function(){
-
-        if($(this).width() < 767){
-            $('#shop-now-section').removeClass('col').addClass('over-image')
-            $('#carousel-section').removeClass('col')
-        }
-        else{
-            $('#shop-now-section').removeClass('over-image').addClass('col')
-            $('#carousel-section').addClass('col')
-        }
-    })
-})
+/* from https://stackoverflow.com/questions/17908542/how-to-hide-div-when-scrolling-down-and-then-show-it-as-you-scroll-up*/
+let mywindow = $(window);
+let mypos = mywindow.scrollTop();
+mywindow.scroll(function() {
+    if(mywindow.scrollTop() > mypos) {
+        $('#main-nav').addClass('hide-on-scroll');
+    }
+    else {
+        $('#main-nav').removeClass('hide-on-scroll');
+    }
+    mypos = mywindow.scrollTop();
+});

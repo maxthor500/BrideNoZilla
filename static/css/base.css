@@ -20,11 +20,7 @@ html {
 
 body {
     background-image: linear-gradient(to right bottom, #f8bbd0, #ffbdc4, #ffc1b9, #ffc7ae, #ffcea6);
-    background-size: cover;
-    height: calc(100vh - 10.25rem);
     font-family: 'Lato', sans-serif;
-    display: flex;
-    flex-direction: column;
 }
 
 /* Navbar */
@@ -61,6 +57,10 @@ body {
 
 .text-black {
     color: #000 !important;
+}
+
+.hide-on-scroll{
+    transform: translateY(-50px);
 }
 
 /* right list replaced by main-nav when exdend menu in mobile */
@@ -135,11 +135,9 @@ body {
 
 /* products */
 .overlay {
-    max-height: 6.25rem;
     width: 100%;
     top: 0;
     left: 0;
-    position: fixed;
     margin-left: 1rem;
 }
 

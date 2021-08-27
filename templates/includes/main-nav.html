@@ -16,9 +16,9 @@
                 Categories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="categories-link">
-                <a href="" class="dropdown-item">Ceremony</a>
-                <a href="" class="dropdown-item ">Party</a>
-                <a href="" class="dropdown-item ">Flowers</a>
+                <a href="{% url 'products' %}?category=ceremony" class="dropdown-item">Ceremony</a>
+                <a href="{% url 'products' %}?category=party" class="dropdown-item ">Party</a>
+                <a href="{% url 'products' %}?category=flowers" class="dropdown-item ">Flowers</a>
             </div>
         </li>
         <li class="nav-item">
