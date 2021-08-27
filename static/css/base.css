@@ -152,6 +152,21 @@ body {
     height: 10rem;
 }
 
+.btt-button {
+    height: 3rem;
+    width: 3rem;
+    position: fixed;
+    background-color: white;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 /* footer */ 
 .social {
     font-size: large;

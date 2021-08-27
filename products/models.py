@@ -18,7 +18,7 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    category_id = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     inventory_id = models.ForeignKey('Inventory', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     description = models.TextField()

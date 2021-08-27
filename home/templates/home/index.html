@@ -61,5 +61,6 @@
 {% endblock %}
 
 {% block extra_js %}
-<script src="{% static 'js/carousel.js' %}" type="application/javascript" defer></script>
+  {{ block.super}}
+    <script src="{% static 'js/carousel.js' %}" type="application/javascript" defer></script>
 {% endblock %}

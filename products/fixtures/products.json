@@ -7,7 +7,7 @@
           "description": "Folding silk fan with bamboo sticks",
           "rating": 3.5,
           "price": 8.99,
-          "category_id": 1,
+          "category": 1,
           "inventory_id": 1,
           "product_image": ""
           }
@@ -20,7 +20,7 @@
           "description": "Folding paper fan with custom event logo",
           "rating": 4,
           "price": 1.99,
-          "category_id": 1,
+          "category": 1,
           "inventory_id": 2,
           "product_image": ""
           }
@@ -33,7 +33,7 @@
           "description": "Flat 21x10 paper card with personalized decorations",
           "rating": 5,
           "price": 0.79,
-          "category_id": 1,
+          "category": 1,
           "inventory_id": 3,
           "product_image": ""
           }
@@ -46,7 +46,7 @@
           "description": "adhesive labels personalized to use on the gadgets of the event",
           "rating": 5,
           "price": 5.99,
-          "category_id": 1,
+          "category": 1,
           "inventory_id": 4,
           "product_image": ""
           }
@@ -59,7 +59,7 @@
           "description": "Flat 15x21 custom wedding booklets",
           "rating": 4,
           "price": 18.99,
-          "category_id": 1,
+          "category": 1,
           "inventory_id": 5,
           "product_image": ""
           }
@@ -72,7 +72,7 @@
           "description": "bag with inside: 1 sanitizer, 1 bottle, 1 hand fan, 1 pack with rice, 1 booklet.",
           "rating": 3,
           "price": 7.99,
-          "category_id": 1,
+          "category": 1,
           "inventory_id": 6,
           "product_image": ""
           }
@@ -85,7 +85,7 @@
           "description": "custom tableau",
           "rating": 4,
           "price": 20.99,
-          "category_id": 2,
+          "category": 2,
           "inventory_id": 7,
           "product_image": ""
           }
@@ -98,7 +98,7 @@
           "description": "boxes for wedding favors personalized",
           "rating": 4,
           "price": 8.99,
-          "category_id": 2,
+          "category": 2,
           "inventory_id": 8,
           "product_image": ""
           }
@@ -111,7 +111,7 @@
           "description": "wedding dragées boxes personalized",
           "rating": 4,
           "price": 0.69,
-          "category_id": 2,
+          "category": 2,
           "inventory_id": 9,
           "product_image": ""
           }
@@ -124,7 +124,7 @@
           "description": "dragées assorted flavor and colors - 500g pack",
           "rating": 5,
           "price": 9.99,
-          "category_id": 2,
+          "category": 2,
           "inventory_id": 10,
           "product_image": ""
           }
@@ -137,7 +137,7 @@
           "description": "kit with a bottle of rum, 500gr of dark chocolate and 10 cigars",
           "rating": 4,
           "price": 31.99,
-          "category_id": 2,
+          "category": 2,
           "inventory_id": 11,
           "product_image": ""
           }
@@ -150,7 +150,7 @@
           "description": "Hand-tied bouquet made with the roses flowers",
           "rating": 4,
           "price": 69.99,
-          "category_id": 3,
+          "category": 3,
           "inventory_id": 12,
           "product_image": ""
           }
@@ -163,7 +163,7 @@
           "description": "Hand-tied bouquet made with the finest flowers",
           "rating": 4,
           "price": 49.99,
-          "category_id": 3,
+          "category": 3,
           "inventory_id": 13,
           "product_image": ""
           }
@@ -176,7 +176,7 @@
           "description": "centerpiece made with the finest flowers",
           "rating": 4,
           "price": 19.99,
-          "category_id": 3,
+          "category": 3,
           "inventory_id": 14,
           "product_image": ""
           }
@@ -189,7 +189,7 @@
           "description": "One level cake 2kg",
           "rating": 4,
           "price": 28.99,
-          "category_id": 4,
+          "category": 4,
           "inventory_id": 15,
           "product_image": ""
           }
@@ -202,7 +202,7 @@
           "description": "Two level cake 3kg",
           "rating": 4,
           "price": 42.99,
-          "category_id": 4,
+          "category": 4,
           "inventory_id": 22,
           "product_image": ""
           }
@@ -215,7 +215,7 @@
           "description": "filled with chocolate",
           "rating": 4,
           "price": 0.99,
-          "category_id": 4,
+          "category": 4,
           "inventory_id":16,
           "product_image": ""
           }
@@ -228,7 +228,7 @@
           "description": "filled with strawberry",
           "rating": 4,
           "price": 1.99,
-          "category_id": 4,
+          "category": 4,
           "inventory_id": 17,
           "product_image": ""
           }
@@ -241,7 +241,7 @@
           "description": "filled with custard",
           "rating": 4,
           "price": 0.99,
-          "category_id": 4,
+          "category": 4,
           "inventory_id": 18,
           "product_image": ""
           }
@@ -254,7 +254,7 @@
           "description": "strawberry glaze",
           "rating": 4,
           "price": 1.29,
-          "category_id": 4,
+          "category": 4,
           "inventory_id": 19,
           "product_image": ""
           }
@@ -267,7 +267,7 @@
           "description": "cream glaze",
           "rating": 4,
           "price": 0.69,
-          "category_id": 4,
+          "category": 4,
           "inventory_id": 20,
           "product_image": ""
           }
@@ -280,7 +280,7 @@
           "description": "sugar paste glaze",
           "rating": 4,
           "price": 2.29,
-          "category_id": 4,
+          "category": 4,
           "inventory_id": 21,
           "product_image": ""
           }
