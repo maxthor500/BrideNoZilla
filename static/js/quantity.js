@@ -1,62 +1,66 @@
-/* from Code Institute Boutique ado */
+$(document).ready(function() {
+    /* from Code Institute Boutique ado */
 
-// Disable +/- buttons outside 1-99 range
-function handleEnableDisable(itemId) {
-    var currentValue = parseInt($(`#id_qty_${itemId}`).val());
-    var minusDisabled = currentValue < 2;
-    var plusDisabled = currentValue > 98;
-    $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
-    $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
-}
+    // Disable +/- buttons outside 1-99 range
+    function handleEnableDisable(itemId) {
+        let currentValue = parseInt($(`#id_qty_${itemId}`).val());
+        let minusDisabled = currentValue < 2;
+        let plusDisabled = currentValue > 98;
+        $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
+        $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
+    }
 
-// Ensure proper enabling/disabling of all inputs on page load
-var allQtyInputs = $('.qty_input');
-for(var i = 0; i < allQtyInputs.length; i++){
-    var itemId = $(allQtyInputs[i]).data('item_id');
+    // Ensure proper enabling/disabling of all inputs on page load
+    let allQtyInputs = $('.qty_input');
+    for(let i = 0; i < allQtyInputs.length; i++){
+        let itemId = $(allQtyInputs[i]).data('item_id');
+        handleEnableDisable(itemId);
+    }
+
+    // Check enable/disable every time the input is changed
+    $('.qty_input').change(function() {
+        let itemId = $(this).data('item_id');
+        handleEnableDisable(itemId);
+    });
+
+    // Increment quantity
+    $('.increment-qty').click(function(e) {
+    e.preventDefault();
+    let closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+    let currentValue = parseInt($(closestInput).val());
+    $(closestInput).val(currentValue + 1);
+    let itemId = $(this).data('item_id');
     handleEnableDisable(itemId);
-}
+    });
 
-// Check enable/disable every time the input is changed
-$('.qty_input').change(function() {
-    var itemId = $(this).data('item_id');
+    // Decrement quantity
+    $('.decrement-qty').click(function(e) {
+    e.preventDefault();
+    let closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+    let currentValue = parseInt($(closestInput).val());
+    $(closestInput).val(currentValue - 1);
+    let itemId = $(this).data('item_id');
     handleEnableDisable(itemId);
-});
-
-// Increment quantity
-$('.increment-qty').click(function(e) {
-   e.preventDefault();
-   var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
-   var currentValue = parseInt($(closestInput).val());
-   $(closestInput).val(currentValue + 1);
-   var itemId = $(this).data('item_id');
-   handleEnableDisable(itemId);
-});
-
-// Decrement quantity
-$('.decrement-qty').click(function(e) {
-   e.preventDefault();
-   var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
-   var currentValue = parseInt($(closestInput).val());
-   $(closestInput).val(currentValue - 1);
-   var itemId = $(this).data('item_id');
-   handleEnableDisable(itemId);
-});
+    });
 
 
-// Update quantity on click
-$('.update-link').click(function(e) {
-    let form = $(this).prev('.update-form');
-    form.submit();
-})
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        let form = $(this).parent().prev('.update-form');
+        form.submit();
+    })
 
-// Remove item and reload on click
-$('.remove-item').click(function(e) {
-    const csrfToken = "{{ csrf_token }}";
-    let itemId = $(this).attr('id').split('remove_')[1];
-    let url = `/cart/remove/${itemId}/`;
- 
-    $.post(url)
-     .done(function() {
-         location.reload();
-     });
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        let csrfToken = "{{ csrf_token }}";
+        let itemId = $(this).attr('id').split('remove_')[1];
+        let url = `/cart/remove/${itemId}/`;
+        // middleware requited by Django
+        let data = {'csrfmiddlewaretoken': csrfToken};
+
+        $.post(url, data)
+            .done(function() {
+                location.reload();
+            });
+    })
 })

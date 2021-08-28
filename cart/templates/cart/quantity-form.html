@@ -1,4 +1,4 @@
-<form class="form update-form" method="POST" action="">
+<form class="form update-form" method="POST" action="{% url 'update_cart' item.item_id %}">
     {% csrf_token %}
     <div class="form-group">
         <div class="form-group text-center">
@@ -28,6 +28,6 @@
     </div>
 </form>
 <div class="row d-flex text-center">
-    <a class="update-link col">Update</a>
-    <a class="remove-item col text-danger float-right" id="remove_{{ item.item_id }}">Remove</a>
+    <a class="update-link col text-uppercase"><i class="fas fa-edit"></i> Update</a>
+    <a class="remove-item col text-danger text-uppercase float-right" id="remove_{{ item.item_id }}"><i class="fas fa-trash"></i> Remove</a>
 </div>
