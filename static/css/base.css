@@ -177,7 +177,27 @@ body {
     cursor: pointer;
 }
 
+/* add to cart form */
+.add-cart-button {
+    background: black;
+    color: white;
+    border: 1px solid black;
+}
+
+.btn-outline-black {
+    background: white;
+    border: 1px solid black;
+} 
+
+.d-quantity {
+    padding: 0 4.5rem;
+}
+
 /* footer */ 
+.footer {
+    padding-top: 2rem;
+}
+
 .social {
     font-size: large;
     color: black;

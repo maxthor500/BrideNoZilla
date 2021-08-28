@@ -4,9 +4,11 @@ let mypos = mywindow.scrollTop();
 mywindow.scroll(function() {
     if(mywindow.scrollTop() > mypos) {
         $('#main-nav').addClass('hide-on-scroll');
+        $('#delivery-banner').addClass('hide-on-scroll');
     }
     else {
         $('#main-nav').removeClass('hide-on-scroll');
+        $('#delivery-banner').removeClass('hide-on-scroll');
     }
     mypos = mywindow.scrollTop();
 });
