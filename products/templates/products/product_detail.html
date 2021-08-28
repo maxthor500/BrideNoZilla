@@ -88,3 +88,9 @@
     {% include 'includes/footer.html' %}
 </article>
 {% endblock %}
+
+{% block extra_js %}
+    {{ block.super}}
+        <!-- async solve [Violation] Forced reflow while executing JavaScript took 34ms -->
+        <script src="{% static 'js/quantity.js' %}" type="application/javascript" async></script>
+{% endblock %}

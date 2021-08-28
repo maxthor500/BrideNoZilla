@@ -112,7 +112,6 @@ body {
 /* Carousel */
 .over-image {
     position: absolute;
-    top: 6rem;
     left: 0;
     justify-content: center;
     z-index: 1;

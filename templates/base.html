@@ -36,9 +36,6 @@
             integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous" defer></script>
     {% endblock %}
 
-    {% block extra_js %}
-    {% endblock %}
-
     <title>BrideNoZilla {% block extra_title %}{% endblock %}</title>
 </head>
 <body class="container">
@@ -155,7 +152,7 @@
     {% block footer %}
     {% endblock %}
 
-    {% block postloadjs %}
+    {% block extra_js %}
     <script src="{% static 'js/scripts.js' %}" type="application/javascript" defer></script>
     {% endblock %}
 
