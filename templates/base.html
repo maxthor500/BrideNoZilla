@@ -131,7 +131,7 @@
         </nav>
         <div id="delivery-banner" class="row text-center">
             <div class="col">
-                <h4 class="text-uppercase text-white"><strong>Free delivery on orders over ${{ free_delivery_threshold }}!</strong></h4>                
+                <h4 class="text-uppercase text-white"><strong>Free delivery on orders over €{{ free_delivery_threshold }}!</strong></h4>                
             </div>            
         </div>
         <div class="row mobile-d-none m-0 p-0">
@@ -156,7 +156,7 @@
     {% endblock %}
 
     {% block postloadjs %}
-    <script src="{% static 'js/scripts.js' %}" type="application/javascript" async></script>
+    <script src="{% static 'js/scripts.js' %}" type="application/javascript" defer></script>
     {% endblock %}
 
 </body>
