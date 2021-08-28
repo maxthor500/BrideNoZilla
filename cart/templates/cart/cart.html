@@ -27,10 +27,10 @@
                     <table class="table table-sm table-borderless">
                         <thead class="text-black">
                             <tr>
-                                <th scope="col">Product Info</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Qty</th>
-                                <th scope="col">Subtotal</th>
+                                <th scope="col" class="text-center">Product Info</th>
+                                <th scope="col" class="text-center">Price</th>
+                                <th scope="col" class="text-center">Qty</th>
+                                <th scope="col" class="text-center">Subtotal</th>
                             </tr>
                         </thead>
 
@@ -48,7 +48,7 @@
                                     <p class="my-0">€{{ item.product.price }}</p>
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0">{{ item.quantity }}</p>
+                                    {% include "cart/quantity-form.html" %}
                                 </td>
                                 <td class="py-3 w-25">
                                     <p class="my-0">Price Each: € {{ item.product.price }}</p>
@@ -101,6 +101,12 @@
 </article>
 {% endblock %}
 
+
 {% block footer %}
   {% include 'includes/footer.html' %}
+{% endblock %}
+
+{% block extra_js %}
+    {{ block.super}}
+        <script src="{% static 'js/quantity.js' %}" type="application/javascript" async></script>
 {% endblock %}

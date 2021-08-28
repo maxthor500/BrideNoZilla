@@ -189,7 +189,12 @@ body {
 } 
 
 .d-quantity {
-    padding: 0 4.5rem;
+    padding: 0 4rem;
+}
+
+.btn-white {
+    background: white;
+    border: 1px solid black;
 }
 
 /* footer */ 
