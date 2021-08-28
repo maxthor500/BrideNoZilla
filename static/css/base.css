@@ -45,6 +45,16 @@ body {
     left: -.1rem;
 }
 
+#delivery-banner {
+    padding: 0;
+    margin: 0;
+    background: black;
+}
+
+#delivery-banner h4 {
+    font-size: .8rem;
+}
+
 /* from Bulma */
 .icon {
   align-items: center;
@@ -95,7 +105,7 @@ body {
 }
 
 .m-custom {
-    margin: 6rem 0 1rem;
+    margin: 7rem 0 1rem;
     padding: 0;
 }
 
@@ -220,7 +230,7 @@ small {
 
     /* Carousel */
     .m-custom {
-        margin-top: 9rem;
+        margin-top: 10rem;
     }
 
     #main-text {
