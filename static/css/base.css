@@ -70,7 +70,7 @@ body {
 }
 
 .hide-on-scroll{
-    transform: translateY(-50px);
+    transform: translateY(-3.5rem);
 }
 
 /* right list replaced by main-nav when exdend menu in mobile */
@@ -174,6 +174,74 @@ body {
 .update-link,
 .remove-item {
     cursor: pointer;
+}
+
+/* bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 4.5rem;
+    right: 1rem;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: .13rem;
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: .25rem solid transparent;
+    border-right: .25rem solid transparent; 
+    border-bottom: .625rem solid black;
+    position: absolute;
+    top: -.625rem;
+    right: 2.25rem;
+}
+
+/* Convenience classes - colors copied from Bootstrap */
+.arrow-primary {
+    border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
+
+.cart-notification-wrapper {
+    height: 6.25rem;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* add to cart form */

@@ -13,4 +13,6 @@ $(document).ready(function() {
         }
         mypos = mywindow.scrollTop();
     });
+
+    $('.toast').toast('show');
 })
