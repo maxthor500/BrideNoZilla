@@ -39,20 +39,11 @@
             {% endif %}
         </div>
     </li>
-    <li class="list-inline-item  dropdown nav-item">
-        <a class="text-black nav-link d-block d-lg-none" href="{% url 'view_cart' %}" id="cart" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <li class="list-inline-item nav-item">
+        <a class="text-black nav-link d-block d-lg-none" href="{% url 'view_cart' %}" id="cart">
             <div class="text-center mt-3">
                 <div><i class="fas fa-shopping-cart"></i></div>
             </div>
         </a>
-        <div class="dropdown-menu border-0" aria-labelledby="cart">
-            <a  class="dropdown-item" href="{% url 'view_cart' %}">
-                {% if grand_total %}
-                    € {{ grand_total|floatformat:2 }}
-                {% else %}
-                    € 0.00
-                {% endif %}
-            </a>
-        </div>
     </li>
 </ul>

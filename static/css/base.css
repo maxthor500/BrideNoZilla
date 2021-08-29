@@ -91,10 +91,6 @@ body {
     font-size: 1rem;
 }
 
-.dropdown-menu {
-    background-image: linear-gradient(to right bottom, #f8bbd0, #ffbdc4, #ffc1b9, #ffc7ae, #ffcea6);
-}
-
 .font-cookie {
     font-family: 'Cookie', cursive;
 

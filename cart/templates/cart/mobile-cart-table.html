@@ -1,0 +1,32 @@
+{% load static %}
+{% load cart_tools %}
+
+
+{% for item in cart_items %}
+    <div class="row text-center">
+        {% if product.product_image %}
+            <a href="{{ product.product_image.url }}" target="_blank">
+                <img class="card-img-top img-fluid" src="{{ product.product_image.url }}" alt="{{ product.name }}">
+            </a>
+        {% else %}
+            <a href="">
+                <img class="card-img-top img-fluid" src="{% static 'media/noimage.png' %}" alt="{{ product.name }}">
+            </a>
+        {% endif %}
+        <h5 class="text-uppercase fw-bold">{{ item.product.name }}</h5>
+    </div>
+    <div class="text-center">
+        <p class="text-black fw-bold">&euro; {{ item.product.price }}</p>
+        <div class="py-1">
+            {% include "cart/quantity-form.html" %}
+        </div>
+        <div class="row d-flex text-center pt-2">
+            <div class="col">
+                <p class="my-0">Price Each: € {{ item.product.price }}</p>
+            </div>
+            <div class="col">
+                <p><strong>Subtotal: </strong>€ {{ item.product.price | calc_subtotal:item.quantity }}</p>
+            </div>
+        </div>
+    </div>
+{% endfor %}
