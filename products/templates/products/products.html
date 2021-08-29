@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load product_tools %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -38,14 +39,14 @@
                 {% if search_term or current_categories or current_sorting != 'None_None' %}
                     <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
                 {% endif %}
-                {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                {{ products|products_showed|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
             </p>
         </div>
     </section>
     <section class="row text-center justify-content-center">
         {% for product in products %}
             <!-- check if the products are not in the "cake" category -->
-            {% if product.id <= 14 %}
+            {% if product.category.name != "cakes" %}
                 <div class="card">
                     {% if product.product_image %}
                         <a href="{% url 'product_detail' product.id %}">
