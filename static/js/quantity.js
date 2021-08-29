@@ -52,7 +52,6 @@ $(document).ready(function() {
 
     // Remove item and reload on click
     $('.remove-item').click(function(e) {
-        let csrfToken = "{{ csrf_token }}";
         let itemId = $(this).attr('id').split('remove_')[1];
         let url = `/cart/remove/${itemId}/`;
         // middleware requited by Django

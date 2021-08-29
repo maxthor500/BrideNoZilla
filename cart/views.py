@@ -2,6 +2,8 @@ from django.shortcuts import (
     render, redirect, reverse, get_object_or_404, HttpResponse)
 from products.models import Product
 from django.contrib import messages
+from django.views.decorators.http import require_POST
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 
@@ -19,15 +21,16 @@ def add_to_cart(request, item_id):
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
+    product_name = product.name.upper()
 
     if item_id in list(cart.keys()):
         cart[item_id] += quantity
         messages.success(request,
-                            (f'Updated {product.name} '
+                            (f'Updated {product_name} '
                             f'quantity to {cart[item_id]}'))
     else:
         cart[item_id] = quantity
-        messages.success(request, f'Added {product.name} to your cart')
+        messages.success(request, f'Added {product_name} to your cart')
 
     request.session['cart'] = cart
 
@@ -40,32 +43,37 @@ def update_cart(request, item_id):
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     cart = request.session.get('cart', {})
+    product_name = product.name.upper()
 
     if quantity > 0:
         cart[item_id] = quantity
         messages.success(request,
-                            (f'Updated {product.name} '
+                            (f'Updated {product_name} '
                             f'quantity to {cart[item_id]}'))
     else:
         cart.pop(item_id)
         messages.success(request,
-                            (f'Removed {product.name} '
+                            (f'Removed {product_name} '
                             f'from your cart'))
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
 
-
+# remove csrf protection to delete items from the cart
+@require_POST
+@csrf_exempt
 def remove_from_cart(request, item_id):
     """Remove the item from the shopping cart"""
 
+    cart = request.session.get('cart', {})
+    product = get_object_or_404(Product, pk=item_id)
+    product_name = product.name.upper()
+
     if item_id in list(cart):
-        cart = request.session.get('cart', {})
-        product = get_object_or_404(Product, pk=item_id)
-        
+      
         try:
             cart.pop(item_id)
-            messages.success(request, f'Removed {product.name} from your cart')
+            messages.success(request, f'Removed {product_name} from your cart')
 
             request.session['cart'] = cart
             return HttpResponse(status=200)

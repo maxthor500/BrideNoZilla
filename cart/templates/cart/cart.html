@@ -109,5 +109,8 @@
 
 {% block extra_js %}
     {{ block.super}}
+        <script>
+            var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+        </script>
         <script src="{% static 'js/quantity.js' %}" type="application/javascript" defer></script>
 {% endblock %}
