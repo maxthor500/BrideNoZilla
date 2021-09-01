@@ -1,0 +1,44 @@
+{% load static %}
+
+<section id="shop-now-section" class="text-center col d-none d-md-block">
+    <!-- H1 -->
+    <h1 id="main-text" class="text-wrap font-cookie">
+        Something old, something new, something borrowed, something blue...<br> and something to make your <strong>Wedding</strong> unique!
+    </h1>
+    <!-- button shop now linked to products page -->
+    <div class="shop-btn-div">
+        <h4>
+            <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-3 text-uppercase">Shop Now</a>
+        </h4>
+    </div>
+</section>
+<!-- Carousel of three images -->
+<section id="carousel-section" class="col d-none d-md-block" >
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'media/shardayyy-photography.jpg' %}" class="d-block w-100" alt="altar">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'media/photos-by-lanty.jpg' %}" class="d-block w-100" alt="table decoration">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'media/rocking-chairs.jpg' %}" class="d-block w-100" alt="wedding cake">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- H1 on mobile -->
+      <div class="text-center" >
+        <h1 id="main-text-mobile" class="text-wrap font-cookie">
+          Something old, something new, something borrowed, something blue...<br> and something to make your <strong>Wedding</strong> unique!
+        </h1>
+      </div>
+</section>
