@@ -47,37 +47,35 @@
         {% for product in products %}
             <!-- check if the products are not in the "cake" category -->
             {% if product.category.name != "cakes" %}
-                <div class="card">
-                    {% if product.product_image %}
-                        <a href="{% url 'product_detail' product.id %}">
+                <a href="{% url 'product_detail' product.id %}" class="text-black text-decoration-none">
+                    <div class="card">
+                        {% if product.product_image %}
                             <img class="card-img-top img-fluid" src="{{ product.product_image.url }}" alt="{{ product.name }}">
-                        </a>
-                    {% else %}
-                        <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid" src="{% static 'media/noimage.png' %}" alt="{{ product.name }}">
-                        </a>
-                    {% endif %}
-                    <div class="card-body">
-                        <h5 class="card-title text-uppercase fw-bold">{{ product.name }}</h5>
-                        <p class="card-text">{{ product.description }}</p>
-                        <p class="text-black fs-3 fw-bold">&euro; {{ product.price }}</p>
-                        {% if product.category %}
-                            <p class="small mt-1">
-                                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                                </a>
-                            </p>
-                        {% endif %}
-                        {% if product.rating %}
-                            <p class="text-muted">
-                                <i class="fas fa-star mr-1"></i>
-                                {{ product.rating }} / 5
-                            </p>
                         {% else %}
-                            <p class="text-muted">No Rating</p>     
-                        {% endif %}            
+                            <img class="card-img-top img-fluid" src="{% static 'media/noimage.png' %}" alt="{{ product.name }}">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase fw-bold">{{ product.name }}</h5>
+                            <p class="card-text">{{ product.description }}</p>
+                            <p class="text-black fs-3 fw-bold">&euro; {{ product.price }}</p>
+                            {% if product.category %}
+                                <p class="small">
+                                    <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                                        <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                    </a>
+                                </p>
+                            {% endif %}
+                            {% if product.rating %}
+                                <p class="text-muted">
+                                    <i class="fas fa-star"></i>
+                                    {{ product.rating }} / 5
+                                </p>
+                            {% else %}
+                                <p class="text-muted">No Rating</p>     
+                            {% endif %}            
+                        </div>
                     </div>
-                </div>
+                </a>
             {% endif %}
             
         {% endfor %}

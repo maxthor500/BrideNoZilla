@@ -183,6 +183,7 @@ body {
 
 .custom-toast {
     overflow: visible;
+    width: 16.8rem !important;
 }
 
 .toast-capper {
@@ -325,5 +326,9 @@ small {
         font-size: 2rem;      
     }
 
+    /* product detail form */
+    .mtop-3rem {
+        margin-top: 3rem;
+    }
 }
 
