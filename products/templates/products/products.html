@@ -53,7 +53,7 @@
                             {% if product.product_image %}
                                 <img class="card-img-top img-fluid" src="{{ product.product_image.url }}" alt="{{ product.name }}">
                             {% else %}
-                                <img class="card-img-top img-fluid" src="{% static 'media/noimage.png' %}" alt="{{ product.name }}">
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                             {% endif %}
                             <div class="card-body">
                                 <h5 class="card-title text-uppercase fw-bold">{{ product.name }}</h5>
@@ -73,7 +73,14 @@
                                     </p>
                                 {% else %}
                                     <p class="text-muted">No Rating</p>     
-                                {% endif %}            
+                                {% endif %}
+                                {% if request.user.is_superuser %}
+                                    <small class="ml-3 d-flex justify-content-center">
+                                        <a class="btn btn-info mr-3" href="{% url 'edit_product' product.id %}">Edit</a>
+                                        <hr class="m-3">
+                                        <a class="btn btn-danger ml-3" href="{% url 'delete_product' product.id %}">Delete</a>
+                                    </small>
+                                {% endif %}         
                             </div>
                         </a>
                     </div>

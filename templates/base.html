@@ -13,7 +13,7 @@
     {% endblock %}
 
     {% block corecss %}
-        <link rel="shortcut icon" type="image/png" href="{% static 'media/BNZLogo.png' %}"/>
+        <link rel="shortcut icon" type="image/png" href="{{ MEDIA_URL }}BNZLogo.png"/>
         <!-- CDN FontAwesome and Bootstrap -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
             integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" type="text/css" />
@@ -47,7 +47,7 @@
         <nav  id="topNav" class="navbar fixed-to navbar-expand-lg navbar-light bg-white">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{% url 'home' %}">
-                    <img id="logo" src="{% static 'media/BNZLogo.png' %}" alt="BNZ">
+                    <img id="logo" src="{{ MEDIA_URL }}BNZLogo.png" alt="BNZ">
                 </a>
                 <!-- mobile top header with navbar, my account and cart -->
                 <div class="col-6 collapse-header justify-content-center">
@@ -100,7 +100,7 @@
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                    <a href="" class="dropdown-item">Product Management</a>
+                                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                                 {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
