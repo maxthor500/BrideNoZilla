@@ -64,3 +64,12 @@ select option[value=""] {
     margin: 0;
     height: 100%;
 }
+
+.order-confirmation-wrapper {
+    background: white;
+    border: 1px solid black;
+}
+
+.word-wrap {
+    word-wrap: break-word;
+}
