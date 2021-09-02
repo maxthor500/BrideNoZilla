@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    /* from Code Institute Boutique Ado*/
+    /* from Code Institute que Boutique Ado*/
     $('.btt-link').click(function(e) {
         window.scrollTo(0,0)
     })

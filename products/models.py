@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create models from boutique ado.
+# Create models from bride no zilla.
 
 class Category(models.Model):
 
