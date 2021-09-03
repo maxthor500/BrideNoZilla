@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<article class="container-fluid m-custom row overlay">
+    <section class="row">
+        <div class="col text-center">
+            <h2 class="font-lobster">Events</h2>
+            <hr class="w-100 mb-1">
+        </div>
+        {% if request.user.is_superuser %}
+        <div class="bttn my-2">
+            <a href="{% url 'add_post' %}" class="btn add-cart-button rounded-0">Post Event</a>
+        </div>
+        {% endif %}
+    </section>
+    <!-- events section -->
+    <section class="row justify-content-center">
+        {% for post in posts %}
+            <div class="card">
+                <a href="{% url 'view_post' post.id %}" class="text-black text-decoration-none">
+                    {% if post.image %}
+                        <img class="card-img-top img-fluid" src="{{ post.image.url }}" alt="{{ post.title }}">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title text-uppercase fw-bold text-center">{{ post.title }}</h5>
+                        <p class="card-text word-wrap">{{ post.content }}</p>
+                        {% if post.author %}
+                            <div class="small">
+                                <p class="text-muted">{{ post.author }}</p>
+                            </div>
+                        {% endif %}
+                        {% if post.updated_on %}
+                            <div class="small">
+                                <p class="text-muted">{{ post.updated_on }}</p>
+                            </div>
+                        {% else %}
+                        <div class="small">
+                            <p class="text-muted">{{ post.created_on }}</p>
+                        </div> 
+                        {% endif %}
+                        {% if request.user.is_superuser %}
+                            <small class="ml-3 d-flex justify-content-center">
+                                <a class="btn btn-info mr-3" href="{% url 'edit_post' post.id %}">Edit</a>
+                                <hr class="m-3">
+                                <a class="btn btn-danger ml-3" href="{% url 'delete_post' post.id %}">Delete</a>
+                            </small>
+                        {% endif %}         
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+        <div class="btt-button shadow-sm rounded-0 border border-black">
+            <a class="btt-link d-flex h-100">
+                <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+            </a>	
+        </div>
+    </section>
+    {% include 'includes/footer.html' %}
+</article>
+{% endblock %}

@@ -47,7 +47,6 @@
         {% for product in products %}
             <!-- check if the products are not in the "cake" category -->
             {% if product.category.name != "cakes" %}
-                
                     <div class="card">
                         <a href="{% url 'product_detail' product.id %}" class="text-black text-decoration-none">
                             {% if product.product_image %}

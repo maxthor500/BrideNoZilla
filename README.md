@@ -1,6 +1,6 @@
  <img src=".\media\BNZLogo.png" alt="BNZLogo" style="zoom:30%;" />
 
-# Bride No Zilla
+
 
 **Code Institute - Milestone Project 4**
 
@@ -198,8 +198,8 @@ I made the BNZ logo and I found the carousel images on [Unsplash](https://unspla
 
     #### Profile
 
-    - The profile page shows the user details and his posts
-    - there are an update and delete button to update the profile details and delete account
+    - he user's profile page will hold the users shipping details for ease of shopping in future.
+    - It also has a reference to the users past orders.
 
     <img src=".\assets\readme_images\profile.jpg" alt="profile" style="zoom:30%;" />
 

@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<article class="container-fluid m-custom row overlay justify-content-center">
+    <!-- events section -->
+    <section class="row card col-12 col-md-6 col-lg-4 offset-lg-2">
+      {% if post.image %}
+          <img class="card-img-top img-fluid" src="{{ post.image.url }}" alt="{{ post.title }}">
+      {% endif %}
+      <div class="card-body">
+          <h5 class="card-title text-uppercase fw-bold text-center">{{ post.title }}</h5>
+          <p class="card-text word-wrap">{{ post.content }}</p>
+          {% if post.author %}
+              <div class="small">
+                  <p class="text-muted">{{ post.author }}</p>
+              </div>
+          {% endif %}
+          {% if post.updated_on %}
+              <div class="small">
+                  <p class="text-muted">{{ post.updated_on }}</p>
+              </div>
+          {% else %}
+          <div class="small">
+              <p class="text-muted">{{ post.created_on }}</p>
+          </div> 
+          {% endif %}
+          {% if request.user.is_superuser %}
+              <small class="ml-3 d-flex justify-content-center">
+                  <a class="btn btn-info mr-3" href="{% url 'edit_post' post.id %}">Edit</a>
+                  <hr class="m-3">
+                  <a class="btn btn-danger ml-3" href="{% url 'delete_post' post.id %}">Delete</a>
+              </small>
+          {% endif %}         
+      </div>
+    </section>
+    <section class="col-12 col-md-6 col-lg-4 text-center mt-4">
+      <div class="comments-wrapper">
+          <h2 class="font-lobster">Comments</h2>
+          {% for comment in comments %}
+          <hr>
+          <p class="my-2">{{ comment.comment }}</p>
+          {% if user == comment.author %}
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+              data-bs-target="#comment-deleteModal-{{comment.id}}">
+              Delete
+          </button>
+          <!-- delete comments modal -->
+          <div class="modal fade" id="comment-deleteModal-{{comment.id}}" tabindex="-1"
+              aria-labelledby="comment-deleteModalLabel-{{comment.id}}" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title fs-5 m-auto" id="comment-deleteModalLabel-{{comment.id}}">Delete
+                              Comment!
+                          </h5>
+                      </div>
+                      <div class="modal-body">
+                          <p class="text-center text-danger">
+                              Are you sure you want to delete your comment?
+                          </p>
+                      </div>
+                      <div class="modal-footer m-auto">
+                          <button type="button" class="modal-button
+                          btn btn-info flex-center" data-bs-dismiss="modal">Cancel</button>
+                          <form method="POST" action="{% url 'delete_comment' post_id=post.id %}">
+                              {% csrf_token %}
+                              <input type="hidden" name="comment_id" value="{{comment.id}}">
+                              <button class="modal-button btn btn-danger flex-center"
+                                  type="submit">Delete</button>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          {% endif %}
+          <hr>
+          {% endfor %}
+          {% if request.user.is_anonymous %}
+          <p class="mt-5 fs-4 mb-5">Please
+              <a class="fs-4 mx-1" href="{% url 'account_login' %}"> Login </a> or
+              <a class="fs-4 mx-1" href="{% url 'account_signup' %}">Signup</a>
+              To add a comment.</p>
+          {% else %}
+          <div class="commentform">
+              <form id="comment-form" method="POST" action="{% url 'view_post' post_id=post.id %}">
+                  {% csrf_token %}
+                  {{ form|crispy }}
+                  <a href="{% url 'view_events' %}" class="btn btn-outline-black rounded-0 m-2">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Back</span>
+                </a>
+                  <button class="btn add-cart-button rounded-0" type="submit">Add comment</button>
+              </form>
+          </div>
+          {% endif %}
+      </div>
+    </section>
+    {% include 'includes/footer.html' %}
+</article>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('#new-image').change(function() {
+            var file = $('#new-image')[0].files[0];
+            $('#filename').text(`Image will be set to: ${file.name}`);
+        });
+    </script>
+{% endblock %}
