@@ -34,6 +34,7 @@ This website is for educational purposes and the stripe functionality is set up 
 | Shopper     | View  individual product details                             | Identify  the price, description, product rating, product image and available sizes. |
 | Shopper     | Easily  view the total of my purchase at any time            | Avoid  Spending too much                                     |
 | Site User   | Easily  register for an account                              | Have  a personal account and be able to view my profile      |
+| Site User   | I am looking for a responsive web design                     | I can display content of website adequately to the device    |
 | Site User   | Easily  login or logout                                      | Access  my personal account information                      |
 | Site User   | Easily  Recover my password in case I forget it              | Recover  access to my account                                |
 | Site User   | Receive  an email confirmation after registering             | Verify  that my account registration was successful          |
@@ -68,7 +69,7 @@ I started developing my wireframes using Balsamiq for each page on mobile, table
 
 ### Skeleton
 
-*  [Wireframes]() PDF file.
+*  [Wireframes](./readme_files/ms4-wireframe.pdf) PDF file.
 
 
 ### Surface
@@ -153,111 +154,78 @@ I made the BNZ logo and I found the carousel images on [Unsplash](https://unspla
 
 #### Home page
 
+- the main hero section shows a carousel of images , a sentence and the shop button. 
+- the nav bar is clear, the section with info of the website and the  section about the user are divided from a central logo.
+
+<img src=".\readme_files\bnz-home.png" alt="bnz-home" style="zoom: 33%;" />
+
 
 
 #### About Us page.
 
 - The about us page gives the user information about the site.
 
-- In this page the users can to find the company details.
+  <img src=".\readme_files\about.png" alt="about" style="zoom:33%;" />
 
   
+
 
 #### Contact us page.
 
 - The contact us page contains a heading and a contact form.
 
-- Upon submittal of the form EmailJS will send the site owner an email containing the message and the user's contact information.
+  <img src=".\contact.png" alt="contact" style="zoom:33%;" />
 
-  <img src=".\assets\readme_images\contact.jpg" alt="contact" style="zoom:30%;" />
+#### Registration.
 
-  #### Registration.
+- The registration page contains a form for users to sign up.
 
-  - The registration page contains a form for users to sign up.
+- Once the user fills the form and submits their details are stored in the database.
 
-  - Once the user fills the form and submits their details are stored in the database.
+  <img src="./readme_files\signup.png" alt="signup" style="zoom:33%;" />
 
-    
+#### Login
 
-    <img src=".\assets\readme_images\register_page.jpg" alt="register_page" style="zoom:30%;" />
+- The login page contains a form for the user to login.
+- Once the user enters the correct details they are logged in and redirected to home page that render the recent posts page.
 
-    #### Login
 
-    - The login page contains a form for the user to login.
-    - Once the user enters the correct details they are logged in and redirected to home page that render the recent posts page.
 
-    <img src=".\assets\readme_images\login_page.jpg" alt="login_page" style="zoom:30%;" />
+#### Profile
 
-    #### Home page when the user is logged
+- he user's profile page will hold the users shipping details for ease of shopping in future.
 
-    - When the user is logged is able to see every posts from the home page.
+- It also has a reference to the users past orders.
 
-    - the home page shows every posts and a share post button to link to add post page
+  <img src=".\readme_files\profile.png" alt="profile" style="zoom:33%;" />
 
-      <img src=".\assets\readme_images\home_page_logged.jpg" alt="home_page_logged" style="zoom:30%;" />
+#### Form
 
-    #### Profile
+- Every forms are pretty similar as functionality.
 
-    - he user's profile page will hold the users shipping details for ease of shopping in future.
-    - It also has a reference to the users past orders.
+- the forms have a header to indicate the purpose of the form.
 
-    <img src=".\assets\readme_images\profile.jpg" alt="profile" style="zoom:30%;" />
+- every inputs have a label or a placeholder to help the user.
 
-    #### Form
+- the submits flash a message for "successfully " or  "something wrong".
 
-    - Every forms are pretty similar as functionality.
+- add post  and edit post pages have a share button checked by default, if the post is not shared the user cans see it just on his profile page.
 
-    - the forms have a header to indicate the purpose of the form.
+- the user add the comments from a page to render the posts with every comments already posted
 
-    - every inputs have a label or a placeholder to help the user.
+- after the comment is posted the user cans just delete his post.
 
-    - the submits flash a message for "successfully " or  "something wrong".
+  the flash messages are rendered as span on the top of the page
 
-    - add post  and edit post pages have a share button checked by default, if the post is not shared the user cans see it just on his profile page.
 
-      <img src=".\assets\readme_images\add_post.jpg" alt="add_post" style="zoom:30;" />
-
-      <img src=".\assets\readme_images\edit post.jpg" alt="edit post" style="zoom:30%;" />
-
-      - the user can update the details of his profile changing email address, linkedin url and website url.
-
-      
-
-      <img src=".\assets\readme_images\update_profile.jpg" alt="update_profile" style="zoom:30%;" />
-
-      - the delete account page ask to insert the password to confirm.
-
-      
-
-      <img src=".\assets\readme_images\delete_account.jpg" alt="delete_account" style="zoom:30%;" />
-
-    - the user add the comments from a page to render the posts with every comments already posted.
-
-      <img src=".\assets\readme_images\comment_post.jpg" alt="comment_post" style="zoom:30%;" />
-
-      
-
-      - after the comment is posted the user cans just delete his post.
-      - I preferred not implement a edit comment button because it is the same delete and add a new.
-
-      <img src=".\assets\readme_images\post_commented.jpg" alt="post_commented" style="zoom:33%;" />
-
-      
-
-      - the flash messages are rendered as span on the top of the page
-
-      <img src=".\assets\readme_images\flash_message.jpg" alt="flash_message" style="zoom:30%;" />
-
-    #### Error 404 page
-
-    <img src=".\assets\readme_images\404_page.jpg" alt="404_page" style="zoom:30%;" />
+#### 
 
 
 ### Features left to Implement
 
 I had few time for this project, I would like:
 
-* 
+* need to implement make cake app
 
 ## Technologies used
 
