@@ -3,6 +3,7 @@ from .models import Product, Category, Inventory
 
 # Register your models here.
 
+
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'name',
@@ -13,11 +14,13 @@ class ProductAdmin(admin.ModelAdmin):
         'product_image',
     )
 
+
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name',
     )
+
 
 class InventoryAdmin(admin.ModelAdmin):
     list_display = (

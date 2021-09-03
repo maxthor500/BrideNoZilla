@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 from django_countries.fields import CountryField
 
+
 class UserProfile(models.Model):
     """
     A user profile model for maintaining default
@@ -26,4 +27,3 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user.username
-

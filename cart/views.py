@@ -25,9 +25,9 @@ def add_to_cart(request, item_id):
 
     if item_id in list(cart.keys()):
         cart[item_id] += quantity
-        messages.success(request,
-                            (f'Updated {product_name} '
-                            f'quantity to {cart[item_id]}'))
+        messages.success(request, (
+            f'Updated {product_name} '
+            f'quantity to {cart[item_id]}'))
     else:
         cart[item_id] = quantity
         messages.success(request, f'Added {product_name} to your cart')
@@ -47,19 +47,21 @@ def update_cart(request, item_id):
 
     if quantity > 0:
         cart[item_id] = quantity
-        messages.success(request,
-                            (f'Updated {product_name} '
-                            f'quantity to {cart[item_id]}'))
+        messages.success(request, (
+            f'Updated {product_name} '
+            f'quantity to {cart[item_id]}'))
     else:
         cart.pop(item_id)
-        messages.success(request,
-                            (f'Removed {product_name} '
-                            f'from your cart'))
+        messages.success(request, (
+            f'Removed {product_name} '
+            f'from your cart'))
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
 
 # remove csrf protection to delete items from the cart
+
+
 @require_POST
 @csrf_exempt
 def remove_from_cart(request, item_id):
@@ -70,7 +72,7 @@ def remove_from_cart(request, item_id):
     product_name = product.name.upper()
 
     if item_id in list(cart):
-      
+
         try:
             cart.pop(item_id)
             messages.success(request, f'Removed {product_name} from your cart')
@@ -81,4 +83,3 @@ def remove_from_cart(request, item_id):
         except Exception as e:
             messages.error(request, f'Error removing item: {e}')
             return HttpResponse(status=500)
-

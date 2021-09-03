@@ -33,14 +33,12 @@ class Order(models.Model):
     original_cart = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=254, null=False, blank=False,
                                   default='')
-    
 
     def _generate_order_number(self):
         """
         Generate a random, unique order number using UUID
         """
         return uuid.uuid4().hex.upper()
-    
 
     def update_total(self):
         """
@@ -56,7 +54,6 @@ class Order(models.Model):
             self.delivery_cost = 0
         self.grand_total = self.order_total + self.delivery_cost
         self.save()
-    
 
     def save(self, *args, **kwargs):
         """
@@ -81,7 +78,6 @@ class OrderLineItem(models.Model):
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2,
                                          null=False, blank=False,
                                          editable=False)
-    
 
     def save(self, *args, **kwargs):
         """
@@ -92,4 +88,6 @@ class OrderLineItem(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'product {self.product.name} on order {self.order.order_number}'
+        return (
+            f'product {self.product.name} '
+            f'on order {self.order.order_number}')

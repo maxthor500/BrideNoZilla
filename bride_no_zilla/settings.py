@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # allauth required 
+    # allauth required
     'django.contrib.sites',
     'allauth',
     'allauth.account',
@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'cart',
     'checkout',
     'profiles',
-    
     # Other
     'crispy_forms',
     "crispy_bootstrap5",
@@ -106,7 +105,7 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-SITE_ID=1
+SITE_ID = 1
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
@@ -183,7 +182,7 @@ if 'USE_AWS' in os.environ:
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
     }
-    
+
     # Bucket config
     AWS_STORAGE_BUCKET_NAME = "bride-no-zilla"
     AWS_S3_REGION_NAME = "eu-west-1"

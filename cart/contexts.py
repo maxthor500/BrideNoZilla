@@ -3,6 +3,7 @@ from decimal import Decimal
 from django.conf import settings
 from products.models import Product
 
+
 def cart_contents(request):
 
     cart_items = []
@@ -26,7 +27,7 @@ def cart_contents(request):
     else:
         delivery = 0
         free_delivery_delta = 0
-    
+
     grand_total = delivery + total
 
     context = {
