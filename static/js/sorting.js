@@ -1,8 +1,8 @@
 $(document).ready(function() {
     /* from Code Institute que Boutique Ado*/
     $('.btt-link').click(function(e) {
-        window.scrollTo(0,0)
-    })
+        window.scrollTo(0,0);
+    });
 
     $('#sort-selector').change(function() {
         var selector = $(this);
@@ -24,4 +24,4 @@ $(document).ready(function() {
             window.location.replace(currentUrl);
         }
     });
-})
+});

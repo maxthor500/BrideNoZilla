@@ -48,7 +48,7 @@ $(document).ready(function() {
     $('.update-link').click(function(e) {
         let form = $(this).parent().prev('.update-form');
         form.submit();
-    })
+    });
 
     // Remove item and reload on click
     $('.remove-item').click(function(e) {
@@ -61,5 +61,5 @@ $(document).ready(function() {
             .done(function() {
                 location.reload();
             });
-    })
-})
+    });
+});
