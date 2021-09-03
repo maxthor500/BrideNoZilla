@@ -1,104 +1,866 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+ <img src=".\media\BNZLogo.png" alt="BNZLogo" style="zoom:30%;" />
 
-Welcome USER_NAME,
+# Bride No Zilla
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. The last update to this file was: **July 2, 2021**
+**Code Institute - Milestone Project 4**
 
-## Gitpod Reminders
+[View webpage in GitHub Pages](https://github.com/maxthor500/BrideNoZilla)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+![Multi Device Website Mockup](./readme_files/BNZ-mockup.png)
 
-`python3 -m http.server`
+This project is the last Milestone Project that make up the Full Stack Developer course at the Code Institute.
 
-A blue button should appear to click: _Make Public_,
+This project aims to build a full-stack web application using the python framework Django, Relational database (recommending MySQL or Postgres) and Stripe payments.
 
-Another blue button should appear to click: _Open Browser_.
+**BRIDE NO ZILLA** is a e-commerce where you can find products to use in a wedding.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+This website is for educational purposes and the stripe functionality is set up to accept the test card details please don't enter your personal card details. 
 
-A blue button should appear to click: _Make Public_,
+- To use the stripe function use the following details.
 
-Another blue button should appear to click: _Open Browser_.
+  - card number : 4242 4242 4242 4242
+  - Any date
+  - Any CVV number.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+[Click here to see the website live](https://bride-no-zilla.herokuapp.com/)
 
-To log into the Heroku toolbelt CLI:
+## User Experience
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### User Stories
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+| As A/AN     | I WANT TO BE  ABLE TO…                                       | SO THAT I CAN…                                               |
+| ----------- | :----------------------------------------------------------- | ------------------------------------------------------------ |
+| Shopper     | View  a list of products                                     | Select  some to purchase                                     |
+| Shopper     | View  individual product details                             | Identify  the price, description, product rating, product image and available sizes. |
+| Shopper     | Easily  view the total of my purchase at any time            | Avoid  Spending too much                                     |
+| Site User   | Easily  register for an account                              | Have  a personal account and be able to view my profile      |
+| Site User   | Easily  login or logout                                      | Access  my personal account information                      |
+| Site User   | Easily  Recover my password in case I forget it              | Recover  access to my account                                |
+| Site User   | Receive  an email confirmation after registering             | Verify  that my account registration was successful          |
+| Site User   | Have  a personalized user profile                            | View  my personal order history and order confirmations, and save my payment  information |
+| Shopper     | Sort  the list of available products                         | Easily  identify the best-rated, best-priced and categorally sorted products |
+| Shopper     | Sort  a specific category of product                         | Find  the best-priced or best-rated product in a specific category or sort the  products in that category by name |
+| Shopper     | Sort  multiple categories of products simultaneously         | Find  the best-priced or best-rated product across broad categories, such  as"clothing" or "homeware" |
+| Shopper     | Search  for a product by name or description                 | Find  a specific product I'd like to purchase                |
+| Shopper     | Easily  see what I've searched for and the number of results | Quickly  decide whether the product I want is available      |
+| Shopper     | Easily  select the size and quantity of a product when purchasing it | Ensure  I don’t accidentally select the wrong product, quantity or size |
+| Shopper     | View  items in my bag to be purchased                        | Identify  the total cost of my purchase and all items I will receive |
+| Shopper     | Adjust  the quantity of individual items in my bag           | Easily  make changes to my purchase before checkout          |
+| Shopper     | Easily  enter my payment information                         | Check  out quickly and with no hassles                       |
+| Shopper     | Feel  my personal and payment information is safe and secure | Confidently  provide the needed information to make a purchase |
+| Shopper     | View  an order confirmation after checkout                   | Verify  that I haven't made any mistakes                     |
+| Shopper     | Receive  an email confirmation after checking out            | Keep  the confirmation of what I've purchased for my records |
+| Store Owner | Add  a product                                               | Add  new items to my store                                   |
+| Store Owner | Edit/update  a product                                       | Change  product prices, descriptions, images and other product criteria |
+| Store Owner | Delete  a product                                            | Remove  items that are no longer for sale                    |
 
-------
+### Strategy
 
-## Release History
+My design goal is to make up everything the information as easy as possible making the UX simple and fun.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Scope
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+The website is a place where the user can buy products to use in own wedding.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Structure
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+I started developing my wireframes using Balsamiq for each page on mobile, tablet and laptop/desktop.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Skeleton
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+*  [Wireframes]() PDF file.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### Surface
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+I next moved onto the design work of the website.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+##### Colour Scheme
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+I used the following palette from [ColorSpace](https://mycolor.space/):
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+<img src=".\readme_files\gradient.jpg" alt="Palette" style="zoom:30%;" />
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
+##### Typography
 
-## FAQ about the uptime script
+I used Google Fonts to select the fonts for my project.
+The 'Lobster' font is the font used on the navbar and the headers, with cursive as the fall-back font in the case for any reason the font isn't being imported into the site correctly.
 
-**Why have you added this script?**
+The 'Cookie' font is the font used on the homepage's main text, with cursive as the fall-back font in the case for any reason the font isn't being imported into the site correctly.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+I used the 'Lato' font for every text in the body with sans-serif as the fall-back font, with the main font the reading seemed too thoughtful.
 
-**How will this affect me?**
+##### Imagery
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+I made the BNZ logo and I found the carousel images on [Unsplash](https://unsplash.com/).
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
+### Database Models and Schema
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+  #### Database Models
 
-**Can I opt out?**
+   - Users
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+      - User
+
+        - From Django Allauth containing the username, email, and password.
+
+      - Userprofile
+
+        - Model containing the user's details for future orders.
+
+          
+
+  - Products 
+    
+    - Products
+    
+      - Contains the product information for each product.
+    
+    - Categories
+    
+      - The categories for the products.
+    
+    - Inventory
+    
+      - the quantity available to buy.
+    
+      
+    
+- Checkout
+
+     - Order
+       - Contains details of the customer's orders, their details, and the items they've ordered.
+     - Orderline item
+       - Items for the customer order the quantity and total.
+
+
+
+#### Database Schema
+
+  - My database schema is shown in the following diagram.
+
+    <img src=".\readme_files\database_BNZ.png" alt="Image of database schema" style="zoom:67%;" />
+
+
+
+## Features
+
+#### Main feautures
+
+#### Home page
+
+
+
+#### About Us page.
+
+- The about us page gives the user information about the site.
+
+- In this page the users can to find the company details.
+
+  
+
+#### Contact us page.
+
+- The contact us page contains a heading and a contact form.
+
+- Upon submittal of the form EmailJS will send the site owner an email containing the message and the user's contact information.
+
+  <img src=".\assets\readme_images\contact.jpg" alt="contact" style="zoom:30%;" />
+
+  #### Registration.
+
+  - The registration page contains a form for users to sign up.
+
+  - Once the user fills the form and submits their details are stored in the database.
+
+    
+
+    <img src=".\assets\readme_images\register_page.jpg" alt="register_page" style="zoom:30%;" />
+
+    #### Login
+
+    - The login page contains a form for the user to login.
+    - Once the user enters the correct details they are logged in and redirected to home page that render the recent posts page.
+
+    <img src=".\assets\readme_images\login_page.jpg" alt="login_page" style="zoom:30%;" />
+
+    #### Home page when the user is logged
+
+    - When the user is logged is able to see every posts from the home page.
+
+    - the home page shows every posts and a share post button to link to add post page
+
+      <img src=".\assets\readme_images\home_page_logged.jpg" alt="home_page_logged" style="zoom:30%;" />
+
+    #### Profile
+
+    - The profile page shows the user details and his posts
+    - there are an update and delete button to update the profile details and delete account
+
+    <img src=".\assets\readme_images\profile.jpg" alt="profile" style="zoom:30%;" />
+
+    #### Form
+
+    - Every forms are pretty similar as functionality.
+
+    - the forms have a header to indicate the purpose of the form.
+
+    - every inputs have a label or a placeholder to help the user.
+
+    - the submits flash a message for "successfully " or  "something wrong".
+
+    - add post  and edit post pages have a share button checked by default, if the post is not shared the user cans see it just on his profile page.
+
+      <img src=".\assets\readme_images\add_post.jpg" alt="add_post" style="zoom:30;" />
+
+      <img src=".\assets\readme_images\edit post.jpg" alt="edit post" style="zoom:30%;" />
+
+      - the user can update the details of his profile changing email address, linkedin url and website url.
+
+      
+
+      <img src=".\assets\readme_images\update_profile.jpg" alt="update_profile" style="zoom:30%;" />
+
+      - the delete account page ask to insert the password to confirm.
+
+      
+
+      <img src=".\assets\readme_images\delete_account.jpg" alt="delete_account" style="zoom:30%;" />
+
+    - the user add the comments from a page to render the posts with every comments already posted.
+
+      <img src=".\assets\readme_images\comment_post.jpg" alt="comment_post" style="zoom:30%;" />
+
+      
+
+      - after the comment is posted the user cans just delete his post.
+      - I preferred not implement a edit comment button because it is the same delete and add a new.
+
+      <img src=".\assets\readme_images\post_commented.jpg" alt="post_commented" style="zoom:33%;" />
+
+      
+
+      - the flash messages are rendered as span on the top of the page
+
+      <img src=".\assets\readme_images\flash_message.jpg" alt="flash_message" style="zoom:30%;" />
+
+    #### Error 404 page
+
+    <img src=".\assets\readme_images\404_page.jpg" alt="404_page" style="zoom:30%;" />
+
+
+### Features left to Implement
+
+I had few time for this project, I would like:
+
+* 
+
+## Technologies used
+
+**Languages, libraries, frameworks, editors and version control**
+
+* HTML5
+  * The language used to create the form and add content to the website.
+  
+* CSS3
+  * The language used to style the HTML5 elements.
+  
+* JavaScript
+  * JavaScript was used throughout the website to make the site interactive.
+  
+* Python
+  * Python was used to build the backend functionality of the web app.
+  
+* [Font Awesome](https://fontawesome.com)
+
+* [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) used for every the component of the website.
+
+* [JQuery](https://jquery.com/)
+
+* Visual Studio Code
+
+* python virtualenv
+
+* [Git Version Control](https://git-scm.com/)
+  * I used Git for Version Control to record changes and updates to my files
+  
+* [GitHub](https://github.com/)
+  * I used GitHub’s repository hosting service to host my deployed website as well as track previous versions of my code 
+  
+  
+
+**Other tools used:**
+
+* [Balsamiq](https://balsamiq.com/)
+  * I used Balsamiq to create wireframes for my project for desktop, tablet and smartphone.
+* [Google Images](https://www.google.com/images)
+  * This was the source for the images in my project.
+* [Google Fonts](https://fonts.google.com/)
+* [dbdiagram.io](https://dbdiagram.io/home)
+  - I used dbdiagram.io to make a diagram of my database schema.
+* [W3Schools](https://www.w3schools.com/css/default.asp)
+  - It was helpful with all my CSS doubts.
+* [Techsini](http://techsini.com/multi-mockup/index.php)
+  - Techsini was used to taking screenshots of the page at different screen sizes.
+* [AutoPrefixer](https://autoprefixer.github.io/)
+  - This project used **AutoPrefixer** to make sure the CSS code is valid for all browsers.
+* [Typora](https://typora.io/)
+* [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
+
+*Note: I also found [Stack Overflow](https://stackoverflow.com/), [W3C Schools](https://www.w3schools.com/) and [MDN Web Docs](https://developer.mozilla.org/en-US/) helpful resources throughout the project, as well as the Code Institute Slack Community. 
+
+- ### Django and Django extensions used
+
+  - [Django](https://www.djangoproject.com/)
+    - Django was used to create the project.
+
+  - [Django Allauth](https://django-allauth.readthedocs.io/en/latest/)
+    - Django allauth was used to create the user sign-in function for the site.
+
+  - [Django Allauth Social Login](https://django-allauth.readthedocs.io/en/latest/providers.html/)
+    - Django allauth Social login function was used to allow the user to sign up, or log in with Facebook.
+
+  - [Django Countries](https://pypi.org/project/django-countries/)
+    - Django Countries was used for the countries select field in the order form.
+
+  - [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+    - Django Crispy Forms were used to utilise the bootstrap form classes.
+
+  ### Frameworks Libraries and Programs.
+
+  - [Stripe](https://stripe.com/ie)
+
+    - CStripe has been used for the payment section of the site.
+
+  - [Heroku](https://signup.heroku.com/)
+
+    - Heroku was used to deploy the website.
+
+  - [Amazon AWS](https://aws.amazon.com/)
+
+    - Amazon AWS was used to store the static files and the images for the site.
+
+
+
+  - [Gunicorn](https://gunicorn.org/)
+
+    - Gunicorn was used for deploying the project to Heroku.
+
+
+## Testing
+
+Testing information can be found in separate [TESTING.md](TESTING.md) file.
+
+
+
+## Deployment
+
+This project was developed using the [Python virtulal environment]() at the begin and following with Visual Studio Code, committed to git and pushed to GitHub using the built-in function within git.
+
+To deploy this page to GitHub Pages from its [GitHub repository](https://github.com/maxthor500/BrideNoZilla), the following steps were taken:
+
+1. Log into GitHub.
+2. From the list of repositories on the screen, select **maxthor500/BrideNoZilla.
+3. From the menu items near the top of the page, select **Settings**.
+4. Scroll down to the **GitHub Pages** section.
+5. Under **Source** click the drop-down menu labelled **None** and select **Master Branch**
+6. On selecting Master Branch the page is automatically refreshed, the website is now deployed.
+7. Scroll back down to the **GitHub Pages** section to retrieve the link to the deployed website.
+
+**How to run this project locally**
+
+To clone this project into Gitpod you will need:
+
+1. A GitHub account. [Create a Github account here](https://github.com/)
+2. Use the Chrome browser
+
+Then follow these steps:
+
+1. Install the [Gitpod Browser Extensions for Chrome](https://www.gitpod.io/docs/browser-extension/)
+2. After installation, restart the browser
+3. Log into [Gitpod](https://gitpod.com/) with your Gitpod account.
+4. Navigate to the [Project GitHub repository](https://github.com/maxthor500/Hirakudo-Academy)
+5. Click the green "Gitpod" button in the top right corner of the repository
+6. This will trigger a new Gitpod workspace to be created from the code in GitHub where you can work locally.
+
+To work on the project code within a local IDE such as VSCode, Pycharm etc:
+
+1. Follow this link to the [project GitHub repository](https://github.com/maxthor500/Finding-Campania).
+2. Under the repository name, click "Clone or download".
+3. In the Clone with HTTPs section, copy the clone URL for the repository.
+4. In your local IDE open the terminal.
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, and then paste the URL you copied in Step 3.
 
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
+git clone https://github.com/USERNAME/REPOSITORY
 ```
 
-**Anything more?**
+1. Press Enter. Your local clone will be created.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+Further reading and troubleshooting on cloning a repository from GitHub [here](https://help.github.com/en/articles/cloning-a-repository).
 
----
+  - To commit I added the file to the staging area with the 
 
-Happy coding!
+    ```
+        git add <filename>
+    ```
+
+    ```
+        git commit -m "<commit message>"
+    ```
+
+    ```
+        git push
+    ```
+
+- #### Deployment to Heroku
+
+  Once the app was ready I deployed it to Heroku by following these steps.
+
+- **Create an app on the Heroku website.**
+
+  - Firstly I clicked on the new button.
+  - Then I clicked on the create a new app.
+  - I then gave my app a name and chose my current region.
+  - I then selected create app.
+
+- **Set up Postgres Database**
+
+  - Heroku
+
+    - In the app resources section I searched for Postgres
+    - I then chose to add to the project and, choosing the free plan.
+    - To use Postgres we need to install 2 dependencies.
+      - dj_database_url
+      - psycopg2
+
+  - **In Project.**
+
+    - I first installed the two packages needed 
+
+    - ``` 
+          pip3 install dj_database_url
+      ```
+
+      -
+
+      ```
+          pip3 install psycopg2_binary
+      ```
+
+    - I then made sure to add them to the requirements.txt file
+      -
+
+        ```
+      pip3 freeze > requirements.txt
+        ```
+
+    - Then in settings.py I imported dj_database_url
+
+    - ``` python
+      import dj_database_url
+      ```
+
+    - I then commented out the current database settings.
+
+    - I then replaced it with the settings for the Postgres database.
+      -
+
+        ``` python
+          DATABASES = {
+              'default': dj_database_url.parse('DATABASE_URL')
+          }
+        ```
+
+    - Get your database URL from your app config settings. (I haven't shown it above as its and environmental variable and shouldn't be shown in version control)
+
+    - Once this is set up we need to migrate our models to the new database.
+
+    - ``` 
+          python3 manage.py migrate
+      ```
+
+    - I then used the fixtures I had to create earlier to add the stock into the new database. 
+
+    - ```
+          python3 manage.py loaddata categories
+          python3 manage.py loaddata stock
+      ```
+
+    - Once this was done I then created a superuser.
+
+    - ```
+          python3 manage.py createsuperuser
+      ```
+
+    - I then committed my changes making sure to remove my database URL beforehand so it isn't saved in version control.
+
+    - I then created an if-else statement in the settings.py to use Postgres if the DATABASE_URL variable is available and if not use the default database
+
+    - ``` python
+          if "DATABASE_URL" in os.environ:
+              DATABASES = {
+                  "default": dj_database_url.parse(os.environ.get('DATABASE_URL'))
+              }
+          else:
+              DATABASES = {
+                  'default': {
+                      'ENGINE': 'django.db.backends.sqlite3',
+                      'NAME': BASE_DIR / 'db.sqlite3',
+                  }
+              }
+      ```
+
+    -The Postgres database is now ready for use.
+
+  - **Gunicorn**
+
+    - For our app to work we need to install Greenunicorn.
+
+    - To install 
+
+    - ```
+      pip3 install Gunicorn
+      ```
+
+    - We then need to create a Procfile to let Heroku know how to run the app.
+      -
+
+        ``` 
+          touch Procfile
+        ```
+
+    - Then in our Procfile place the following code.
+      -
+
+        ```
+          web: gunicorn <app name>.wsgi:application
+        ```
+
+  - **Heroku in the command line.**
+
+    - I then logged into Heroku using the terminal.
+      -
+
+        ```
+          heroku login -i
+        ```
+
+    - Then I temporarily disabled the static files until they have been set up on Amazon Aws.
+      -
+
+        ```
+          heroku config:set DISABLE_COLLECTSTATIC=1 --app <app name>
+        ```
+
+        - Use the --app command if you have more than one Heroku app.
+
+    - Then in settings I added Heroku into allowed hosts, and localhost so my project can still be run locally.
+      -
+
+        ``` python
+          ALLOWED_HOSTS = ["<heroku app name>.herokuapp.com", "localhost"]
+        ```
+
+    - My changes were then committed to Github.
+
+    - Then I set up pushing to Heroku
+      -
+
+        ```
+          heroku git:remote -a <heroku app name>
+        ```
+
+    - Then we push the project to Heroku
+      -
+
+        ```
+          git push heroku master
+        ```
+
+    - Heroku will now build your app.
+
+  - **Heroku Website**
+
+    - I then connected my app to GitHub by opening the Deploy section.
+    - I then searched for my repository.
+    - Once found I connected and then enabled Automatic Deploys
+    - This now means that any changes pushed to GitHub will be automatically pushed to Heroku as well.
+
+- #### Amazon AWS
+
+  - Amazon AWS was used to store both static files and media files.
+
+  - Firstly I created an AWS account and worked through the sign-up process. Once my account was set up I was able to set my project up on AWS.
+
+  - **Create a bucket.**
+
+    - Create the bucket
+
+      - First thing was to create a new bucket on the AWS S£ service.
+      - From the main dashboard search for S£ and then click to get started.
+      - Click on the Create bucket button.
+      - Give the bucket a name and select your region.
+      - Then uncheck the block public access and acknowledge that the bucket will now be public.
+      - Then click create bucket.
+
+    - Bucket settings.
+
+      - Properties
+
+        - Navigate to the bucket properties settings.
+        - Turn on static website hosting.
+        - In the index and error add index.html and error.html.
+        - Click Save.
+
+      - Permissions
+
+        - Click on the buckets Permissions tabs.
+
+        - Firstly paste in the following cors config.
+
+        - ```
+          [
+              {
+                  "AllowedHeaders": [
+                      "Authorization"
+                  ],
+                  "AllowedMethods": [
+                      "GET"
+                  ],
+                  "AllowedOrigins": [
+                      "*"
+                  ],
+                  "ExposeHeaders": []
+              }
+              ]
+          ```
+
+        - Then in the bucket policy tap, click on generate policy.
+
+        - Policy
+
+        - Select S3 bucket policy
+
+        - Add * to the principal field to select all principals
+
+        - Set the action to get object.
+
+        - Paste in your ARN which is available on the previous page.
+
+        - Click, add statement
+
+        - Then click, generate policy.
+
+        - Now copy and paste your new policy into the bucket policy.
+
+        - Add /* onto the end of the resources key
+
+        - Click Save.
+
+      - Access control list
+
+      - In the access control list tab set the list objects permission to everyone.
+
+   - **Create a User.**
+
+     - To create a user for the bucket we need to use another Amazon service.
+     - Back in the main dashboard search for IAM and select it.
+
+     - Create a Group.
+       - Firstly we need to create a group to put our user in.
+       - Click create a new group and name it.
+       - Click through to the end and save the group.
+       - Create a policy.
+         - In our group click, policy and then, create policy.
+         - Select the JSON tab and then import managed policies.
+         - Search S3 and select AmazonS3FullAccess and import.
+         - In the resources section paste in our arn from before.
+         - click through to review the policy.
+         - Fill in name and description and then click generate policy.
+       - Back in your group click permission and then attach the policy.
+       - Find the policy you've just created and attach it.
+
+     - Create the User.
+       - Select Users from the sidebar and then click, add user.
+       - Create a user name and select programmatic access then click next.
+       - Then select your group to add your user to.
+       - Click through to the end and then click create user.
+       - ** Make sure to now download the CSV file as it contains the users keys needed to access from our app.**
+
+  - **Connecting to Django**
+
+    - Once our AWS has been set up we now need to connect it to Django.
+
+    - Firstly two packages are needed.
+
+      - boto 3
+      - Django storages
+
+    - Firstly install these packages.
+      -
+
+        ```
+          pip3 install boto3
+          pip3 install django-storages
+        ```
+
+    - Then add to our requirements.
+      -
+
+        ```
+          pip3 freeze > requirements.txt
+        ```
+
+    - We then add storages into our installed apps in settings.py
+
+    - We then add the following settings to our settings.py
+
+    - We create an environmental variable to only run this code when on Heroku. "USE_AWS"
+      -
+
+        ``` python
+            if "USE_AWS" in os.environ:
+      
+                # Bucket Config
+                AWS_STORAGE_BUCKET_NAME = '<bucket name>'
+                AWS_S3_REGION_NAME = '<your region>'
+                AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+                AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+                AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+      
+                # static and media file storage
+                STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+                STATICFILES_LOCATION = 'static'
+                DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+                MEDIAFILES_LOCATION = 'media'
+      
+                # Override static and media URLs in production
+                STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+                MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+        ```
+
+    - Then back in Heroku we click the settings and reveal config vars.
+
+    - Then set up the environmental variables needed.
+
+    - We then create a custom_storages.py to tell Django that in production we want to use s3 to store our static and media files.
+
+    - We Firstly need to import S3Boto3Storage.
+
+    - then we set up our new classes to tell Django where to store the files.
+      -
+
+        ``` python
+          class StaticStorage(S3Boto3Storage):
+              location = settings.STATICFILES_LOCATION
+        ```
+
+
+            class MediaStorage(S3Boto3Storage):
+                location = settings.MEDIAFILES_LOCATION
+        ```
+    - Once all the settings are done we can now push to GitHub and Heroku.
+
+  - **Add our media to AWS.**
+
+    - The final step is to add our media to AWS.
+    - In your bucket create a new folder called media.
+    - Select upload and add your image files.
+    - Then select to grant public access.
+    - And then upload the files.
+
+#### Setting up locally
+
+  - - Then extract the zip file to your repository.
+
+    - Alternatively, you can clone it into your repository using the following command.
+
+      - ```
+            git clone https://github.com/maxthor500/BrideNoZilla.git
+        ```
+
+    - Once you have created the repository you can now download the requirements by running the following command.
+
+      - 
+
+      ```
+            pip3 install -r requirements.txt
+      ```
+
+    - You must then set up the following environment variables to use the full functionality of the site.
+
+      - DANGO_SECRET_KEY = your secret key.
+      - STRIPE_PUBLIC_KEY = your stripe public key.
+      - STRIPE_SECRET_KEY = your stripe secret key.
+      - STRIPE_WEBHOOK_SECRET = your stripe webhook secret.
+      - IN_DEVELOPMENT = True
+
+      - Your stripe variables can be found on your stripe dashboard.
+      - You can generate a Django secret key here. [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/)
+
+    - You will then need to migrate the database models to set up your database.
+
+    - - Check first
+
+        ```
+            python3 manage.py makemigrations --dry-run
+        ```
+
+       - Then make migrations.
+
+         ```
+             python3 manage.py makemigrations
+         ```
+
+       - Check the migration plan
+
+         ```
+             python3 manage.py migrate --plan
+         ```
+
+       - Then finally migrate
+
+         ```
+             python3 manage.py migrate
+         ```
+
+     - Then create your superuser to access the admin section.
+       -
+
+       ```
+           python3 manage.py createsuperuser
+       ```
+
+       - Following the prompts.
+
+    - Once these steps have been followed you can then run the project by using the following command.
+
+      - ```
+            python3 manage.py runserver
+        ```
+
+## 
+
+## CreditsMedia
+
+#### 	Code
+
+- from [BrianWhelanDublin](https://github.com/BrianWhelanDublin/milestone-project-3) I used to write my readme
+
+
+#### 	Acknowledgements
+
+I would like to thank the following:
+
+* My mentor, **Spencer Barriball**, for his guidance, wisdom and encouragement throughout the project.
+* **CI Staff** and **Slack Community** for their assistance with minor coding issues.
+
+**The content of this website is for educational purposes only.**
+
+Thanks for taking the time to view my README. I hope you enjoyed your visit to my page.
