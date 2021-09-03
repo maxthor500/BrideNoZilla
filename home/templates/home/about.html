@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="row header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block corejs %}
+<!-- EmailJS init -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        emailjs.init("user_hfmRd8ZoJ0XRxL3hMA6lI");
+    })();
+</script>
+{% endblock %}
+
+{% block content %}
+<article class="container-fluid m-custom row">
+    <div class="col-sm-6 d-flex align-items-center justify-content-center">
+        <h1 class="font-lobster">ABOUT US</h1>
+      </div>
+      <div class="col-sm-6 border-0">
+        <p class="text-center"><strong class="font-bungee">Bride No Zilla</strong> is a place where you can find what you need to arrange your wedding.<br>
+        </p>
+      </div>
+</article>
+{% endblock %}
+
+{% block footer %}
+  {% include 'includes/footer.html' %}
+{% endblock %}
