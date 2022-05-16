@@ -5,7 +5,7 @@
 {% for item in cart_items %}
     <div class="row text-center">
         {% if product.product_image %}
-            <a href="{{ product.product_image.url }}" target="_blank">
+            <a href="{{ product.product_image.url }}" target="_blank" rel="noopener noreferrer">
                 <img class="card-img-top img-fluid" src="{{ product.product_image.url }}" alt="{{ product.name }}">
             </a>
         {% else %}

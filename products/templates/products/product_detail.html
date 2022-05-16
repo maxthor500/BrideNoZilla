@@ -13,7 +13,7 @@
 <article class="container-fluid m-custom row justify-content-center">
     <section class="row card col-12 col-md-6 col-lg-4 offset-lg-2 text-center">
         {% if product.product_image %}
-            <a href="{{ product.product_image.url }}" target="_blank">
+            <a href="{{ product.product_image.url }}" target="_blank" rel="noopener noreferrer">
                 <img class="card-img-top img-fluid" src="{{ product.product_image.url }}" alt="{{ product.name }}">
             </a>
         {% else %}
